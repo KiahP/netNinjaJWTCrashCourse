@@ -12,7 +12,7 @@ app.use(express.json());
 app.set('view engine', 'ejs');
 
 // database connection
-const dbURI = 'mongodb://dbKiah:brentni4@cluster1-shard-00-00.zdtm9.mongodb.net:27017,cluster1-shard-00-01.zdtm9.mongodb.net:27017,cluster1-shard-00-02.zdtm9.mongodb.net:27017/test?ssl=true&replicaSet=atlas-kuxyoj-shard-0&authSource=admin&retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://dbKiah:<password>@cluster1.zdtm9.mongodb.net/ninjasmoothies?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err));
